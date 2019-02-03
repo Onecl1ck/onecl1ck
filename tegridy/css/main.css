@@ -18,6 +18,7 @@ h1, h2, h3, h4, h5 {
 
 h3 {
     font-weight: 400;
+    font-size: 30px;
 }
 
 h2 {
@@ -29,24 +30,8 @@ td {
     padding-right: 20px;
 }
 .logo {
-    width: 70%;
-    height: 70%;
-}
-.title {
-    padding-top: 100px;
-    padding-bottom:70px;
-    text-align: center;
-}
-
-.title__main {
-    font-size: 32px;
-}
-
-.title__text {
-    color: #010101;
-    font-size: 20px;
-
-    margin: 0 auto;
+    width: 80%;
+    height: 80%;
 }
 
 .yellow {
@@ -181,6 +166,23 @@ td {
 .feature__text {
     color: #898989
 }
+.title {
+    padding-top: 80px;
+    padding-bottom:70px;
+    text-align: center;
+}
+
+.title__main {
+    font-size: 42px;
+}
+
+.title__text {
+    color: #010101;
+    font-size: 24px;
+
+    margin: 0 auto;
+}
+
 .malware {
     text-align: center;
     background-color: #45c0e1;
@@ -280,13 +282,12 @@ td {
     font-family: 'PT Sans', sans-serif;
     background: transparent;
     color: #fff;
-    text-transform: uppercase;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     border-radius: 50px;
-    width: 146px;
+    width: 166px;
     border: 2px solid #3c8cc4;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 30px 10px 30px;
     cursor: pointer;
     outline: none;
     margin-top: -8px;
@@ -310,6 +311,29 @@ td {
     padding: 7px 0;
     cursor: pointer;
     outline: none;
+}
+.orange {
+    color: #fef4e9;
+    border: solid 1px #da7c0c;
+    background: #f78d1d; /*цвет фона кнопки для браузеров без поддержки CSS3*/
+    background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20)); /* для Webkit браузеров */
+    background: -moz-linear-gradient(top,  #faa51a,  #f47a20); /* для Firefox */
+    background-image: -o-linear-gradient(top,  #faa51a,  #f47a20); /* для Opera 11 */
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20'); /* фильтр для IE */
+}
+.orange:hover {
+    background: #f47c20;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
+    background: -moz-linear-gradient(top,  #f88e11,  #f06015);
+    background-image: -o-linear-gradient(top,  #f88e11,  #f06015);/* для Opera 11 */
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
+}
+.orange:active {
+    color: #fcd3a5;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
+    background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
+    background-image: -o-linear-gradient(top,  #f47a20,  #faa51a);/* для Opera 11 */
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f47a20', endColorstr='#faa51a');
 }
 
 /* Футер */
