@@ -30,8 +30,9 @@ td {
     padding-right: 20px;
 }
 .logo {
-    width: 80%;
-    height: 80%;
+
+    width: 239px;
+    height: 36px;
 }
 
 .yellow {
@@ -40,14 +41,36 @@ td {
 
 
 /* Первый экран */
+.header-hidden {
+    background-color: white !important;
+    transition: background-color 1s ease-in-out !important;
 
+}
+.menu__item-hidden  {
+    color: #4d9fd2 !important;
+    transition: color 1s ease-in-out !important;
+}
+.menu__item-hidden:hover {
+    color: #ff4800 !important;
+    transition: color 1s ease-in-out;
+}
+.top__btn-hidden {
+    color: #4d9fd2 !important;
+    border-color: #3c8cc4 !important;
+    transition: border-color 1s ease-in-out, color 1s ease-in-out !important;
+}
+.top__btn-hidden:hover {
+    color: #ff4800 !important;
+    border-color: #ff4800 !important;
+    transition: color 1s ease-in-out, background-color 1s ease-in-out;
+}
 
 .header {
-
     background-color: transparent;
+    transition: background-color 1.5s ease-in-out;
     color: #010101;
-    padding-top:15px;
-    padding-bottom: 15px;
+    padding-top:8px;
+    padding-bottom: 10px;
     width:100%;
     position: fixed;
     z-index: 1000;
@@ -75,6 +98,7 @@ td {
 }
 .invite h1{
     color: white;
+    font-size: 32px;
 }
 .phoneform {
     margin-left: 60px;
@@ -83,33 +107,47 @@ td {
 .price {
    padding-top: 20px;
     margin-top: 250px;
-    background: #fff;
+    background: #e5e5e5;
+    transition: background-color 1s ease-in-out;
     color: #000000;
     text-align: center;
     border-radius: 5px;
     padding-bottom: 150px;
-    border: 6px groove black;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
 }
+.price:hover {
+    background: #fff;
+    transition: background-color 1s ease-in-out;
+}
+.price-up {
+    margin-top: 200px !important;
+}
+
 
 .menu {
     margin-top:8px;
 }
 
 .menu__item {
-    margin: 0 25px;
+    margin: 0px 25px;
+}
+.menu__item h2 {
+    font-size: 16px;
+
 }
 
 .menu__item a {
     font-family: 'Neucha', cursive;
-    font-size:22px;
+    font-size:16px;
     font-weight:700;
     color: #fff;
     text-decoration:none;
+    transition: color 1s ease-in-out;
 }
 .menu__item a:hover {
     color: #ff4800;
-    transition: color 0.4s ease-in-out;
-
+    transition: color 1s ease-in-out;
 }
 
 .offer {
@@ -227,8 +265,7 @@ td {
 .learn_more a:hover {
     background-color: white;
     color: #45c0e1;
-    transition: background-color  0.5s ease-in-out;
-    transition: color 0.5s ease-in-out;
+    transition: background-color  1s ease-in-out, color 1s ease-in-out;
 }
 /* Третий экран */
 
@@ -255,7 +292,7 @@ td {
     background: #e5e5e5;
     font-size: 16px;
     font-family: 'PT Sans', sans-serif;
-    border-radius: 5px;
+    border-radius: 50px;
     width: 250px;
     padding: 14px 0;
     margin-right:21px;
@@ -282,15 +319,23 @@ td {
     font-family: 'PT Sans', sans-serif;
     background: transparent;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     border-radius: 50px;
-    width: 166px;
+    width: 150px;
     border: 2px solid #fff;
-    padding: 10px 25px 10px 25px;
+    padding: 5px 20px 5px 20px;
     cursor: pointer;
     outline: none;
     margin-top: -8px;
+    transition: border-color 1s ease-in-out, color 1s ease-in-out;
+
+}
+.top__btn:hover {
+
+    color: #ff4800;
+    border-color: #ff4800 !important;
+    transition: color 1s ease-in-out, border-color 1s ease-in-out;
 }
 
 .invite__btn {
@@ -304,7 +349,7 @@ td {
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 700;
-    border-radius: 5px;
+    border-radius: 50px;
     width: 250px;
     height: 50px;
     border: 1px #ffffff solid;
@@ -367,11 +412,6 @@ td {
 /* Медиа-запросы */
 
 @media screen and (max-width: 992px) {
-    .logo {
-        display: block;
-        margin: 0 auto;
-        /*margin-bottom: 30px;*/
-    }
     .price {
         margin-top: 45px;}
     .invite {
@@ -412,8 +452,22 @@ td {
 }
 
 @media screen and (max-width: 576px) {
+    .logo {
+
+        width: 191px;
+        height: 29px;
+    }
+
+
     h3 {
         font-size: 24px;
+    }
+    .menu {
+        flex-direction: column;
+    }
+    .menu__item {
+        text-align: center;
+
     }
     .title__text {
         font-size: 20px;
@@ -422,11 +476,8 @@ td {
         width: auto;
         background-image: url("/img/back2.jpg");
     }
-    .menu__item{
-        margin-top: -10px;
-    }
     .top__btn{
-        margin-top: -15px;
+        margin-top: 0px;
     }
     .phoneform {
         margin-left: 15px;
@@ -495,11 +546,5 @@ td {
         font-size: 22px;
 
     }
-    .menu {
-        flex-direction: column;
-    }
-    .menu__item {
-        text-align: center;
-        margin-bottom:10px;
-    }
+
 }

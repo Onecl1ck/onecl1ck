@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tegridy</title>
+    <title>Onecl1ck</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Neucha&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -24,17 +24,17 @@
     window.onscroll = function() {
         scrolled = window.pageYOffset || document.documentElement.scrollTop;
         if(scrolled > 10){
-            $(".header").css({"transition": "1s","background": "white"})
-            $(".menu__item a").css({"transition": "1s", "color": "#4d9fd2"})
-            $(".top__btn").css({"transition": "1s", "color": "#4d9fd2"})
-            $(".top__btn").css({"transition": "1s", "border-color": "#3c8cc4"})
+
+            $('.header').addClass('header-hidden');
+            $('.menu__item a').addClass('menu__item-hidden');
+            $('.top__btn').addClass('top__btn-hidden');
 
         }
         if(10 > scrolled){
-            $(".header").css({"transition": "1s", "background": "transparent"})
-            $(".menu__item a").css({"transition": "1s", "color": "#fff"})
-            $(".top__btn").css({"transition": "1s", "color": "#fff"})
-            $(".top__btn").css({"transition": "1s", "border-color": "#fff"})
+
+            $('.header').removeClass('header-hidden');
+            $('.menu__item a').removeClass('menu__item-hidden');
+            $('.top__btn').removeClass('top__btn-hidden');
         }
 
     }
@@ -43,12 +43,12 @@
     <header id="header" class="header">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 d-flex">
+                <div class="col-lg-3">
                     <a href="index.html">
                     <img src="img/logo.png" alt="Tegridy" class="logo animated fadeInDown">
                     </a>
                 </div>
-                <div class="col-lg-8 hidden-xs hidden-sm">
+                <div class="col-lg-9 hidden-xs hidden-sm">
                     <nav>
                         <ul class="menu d-flex justify-content-center animated fadeInDown">
                             <li class="menu__item">
@@ -67,7 +67,7 @@
                                 </a>
                             </li>
                             <li>
-                                <button type="submit" class="top__btn">Позвонить!</button>
+                                <button type="submit" id="top__btn" class="top__btn">Позвонить!</button>
                             </li>
                         </ul>
                     </nav>
@@ -124,8 +124,8 @@
                 </div>
                 </div>
                 <div class="col-lg-4">
-                <div class="price animated fadeInUp">
-                    <h1>Проблемы</h1>
+                <div class="price price-up animated fadeInUp">
+                    <h1>Неполадки</h1>
                     <table cellpadding="7">
                         <tr>
                             <td width="100%"><i class="fa fa-power-off" aria-hidden="true"></i> Не включается</td>
