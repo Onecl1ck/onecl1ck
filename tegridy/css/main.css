@@ -1,4 +1,3 @@
-/* Спецификация */
 
 body {
     font-family: "RobotoRegular", sans-serif;
@@ -384,7 +383,7 @@ td {
 /* Футер */
 .touch {
     width: auto;
-    background-image: url(/img/foot.jpg);
+    background-image: url(../img/foot.jpg);
     background-size: cover!important;
     color: #fff;
 }

@@ -38,9 +38,9 @@
 
 <script>
     function alerttel() {
-        var val = document.getElementById('tel').value;
-        //document.getElementById('str').innerHTML = "Вы ввели: " + val;
-        alert("Мы перезвоним на номер " + val + " в течении пары минут");
+        var telnumber = document.getElementById('tel').value;
+        var readyforcall = confirm("Мы перезвоним на номер " + telnumber + " в течении пары минут");
+        console.log(readyforcall);
     }
 </script>
 <script>
